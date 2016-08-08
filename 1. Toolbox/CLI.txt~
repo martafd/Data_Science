@@ -1,0 +1,16 @@
+pwd - path to current directory
+clear - clear СLI
+ls - list of files in current directory
+ls -a - lists hidden and unhidden files and folders
+ls -al - lists detais for hidden and unhidden files and folders(size etc)
+cd - change directory
+mkdir Folder - create folder Folder
+touch test_file - create file
+cp test_file Documents - copy test_file to Documents
+cp -r Doc to Docs - copw folder Doc into folder Docs
+rm file_test - delete file file_test 
+rm -r Docs - delete folder Docs
+mv new_file Docs - remove new_file to Docs 
+mv file new_file - rename file into new_file 
+echo Hello! - like comments
+date - show date

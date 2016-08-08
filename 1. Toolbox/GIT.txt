@@ -1,0 +1,23 @@
+#create repo
+git init	
+git remote add origin http://github.com/yourUserName/repo.git
+git clone http://github.com/yourUserName/repo.git
+
+git add . - add all new files
+git add -u - updates tracking for files that changed names or were deleted
+git add -A - both above
+
+git commit -m "message"
+
+git push origin master
+
+
+# create a branch
+git checkout -b branchname
+
+# to see the current branch
+git branch
+
+# change branch to master branch
+git checkout master
+
