@@ -31,3 +31,33 @@ ftable(xt)
 fakeData <- rnorm(1e5)
 object.size(fakeData)
 print(object.size(fakeData), units = 'Mb')
+
+
+data$nearMe <-data$zipCode %in% c('21212', '21213')
+table(data$nearMe)
+data$zipWrong <- ifelse(data$zipCode < 0, TRUE, FALSE) ## true if zipCode<0
+table(data$zipWrong, data$zipCode < 0)
+
+data$zipGroups <- cut(data$zipCode, breaks = quantile(data$zipCode))
+table(data$zipGroups)
+table(data$zipGroups, data$zipCode)
+
+library(Hmisc)
+data$zipGroups <- cut2(data$zipCode, g = 5)
+table(data$zipGroups)
+
+data$zcf <- factor(data$zipCode)
+head(data$zcf, 10)
+class(data$zcf)
+
+
+yesno <- sample(c('yes', 'no'), size = 10, replace = TRUE)
+yesnofactor <- factor(yesno, levels = c('yes', 'no'))
+relevel(yesnofactor, ref = 'yes')
+as.numeric(yesnofactor)
+
+## using the mutate(changing) function
+library(Hmisc)
+library(plyr)
+data2 <- mutate(data, zipGroups = cut2(zipCode, g =5))
+table(data2$zipGroups)
