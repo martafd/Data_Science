@@ -42,6 +42,3 @@ library(plyr)
 library(reshape2)
 data2 <- ddply(melt(finalData, id.vars=c("subject", "activity")), .(subject, activity), summarise, MeanSamples=mean(value))
 write.table(data2, file = "tidydata.txt", row.name=FALSE)
-
-library(knitr)
-knit2html("codebook.Rmd")
