@@ -28,6 +28,7 @@ length(zipc[zipc == 21231])
 fileUrl2 <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv'
 download.file(fileUrl2, destfile = './quiz_week1_5.csv', method = 'curl')
 data <- read.csv('quiz_week1_5.csv')
+
 DT <- fread('quiz_week1_5.csv')
 # We can change the value of "race" according to our needs
 race <- 1000

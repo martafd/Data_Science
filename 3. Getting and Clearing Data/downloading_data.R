@@ -73,7 +73,6 @@ cat(myjson)  ## Outputs the objects, concatenating the representations. cat perf
 iris2 <- fromJSON(myjson)
 head(iris2)
 
-
 ## using data.table
 library(data.table)
 df <- data.frame(x=rnorm(9), y= rep(c('a','b','c'), each = 3), z = rnorm(9))

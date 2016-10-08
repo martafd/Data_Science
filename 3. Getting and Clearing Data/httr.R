@@ -45,4 +45,3 @@ nchar(htmlCode[100])
 data <- read.fwf('getdata%2Fwksst8110.for', widths = w <- c(12, 7,4, 9,4, 9,4, 9,4), skip = 4)
 head(data)
 sum(data[, 4])
-    
