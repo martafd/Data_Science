@@ -10,11 +10,10 @@ json2[1, 1:4]
 
 library(httr)
 library(httpuv)
-library(dplyr)
 library(jsonlite)
 ## setting the OAuth for github:
 oauth_endpoints("github")
-myapp <- oauth_app("github", key = "f62b85a733b6831b14f0", secret = "30352cc519a3d0647da7c47587062cc13f0ba5cf")
+myapp <- oauth_app("github", key = "f62b85a733b6831b14f0", secret = "2b02cdb6ce34768da6caf5302e308c6ae4682555")
 ## get OAuth credentials
 github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
 ## using API
@@ -24,7 +23,7 @@ stop_for_status(req)
 output <- content(req)
 jsonData <- jsonlite::fromJSON(toJSON(output))
 head(jsonData)
-jsonData[jsonData$message == 'jtleek/datasharing',]
+jsonData[jsonData$full_name == 'jtleek/datasharing',]
 
 
 setwd('/home/marta/Documents/Data_Science/3. Getting and Clearing Data/')
